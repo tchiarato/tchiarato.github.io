@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Ahoy, sou desenvolvedor ruby on rails e C#.
   Agnóstico de linguagem, vamos aprender e ensinar ao mesmo tempo.
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: "http://www.tchiarato.com" # the base hostname & protocol for your site
+url: "http://www.chiarato.com" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
 author: "Thiago Chiarato"
 author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
