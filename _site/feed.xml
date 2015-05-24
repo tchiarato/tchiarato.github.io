@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ruby on Rails</title>
+    <title>Amazing::Development</title>
     <description>Ahoy, sou desenvolvedor ruby on rails e C#. Agnóstico de linguagem, vamos aprender e ensinar ao mesmo tempo.
 </description>
     <link>http://127.0.0.1:4000/</link>
     <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 May 2015 20:53:24 -0300</pubDate>
-    <lastBuildDate>Thu, 21 May 2015 20:53:24 -0300</lastBuildDate>
+    <pubDate>Sun, 24 May 2015 20:06:05 -0300</pubDate>
+    <lastBuildDate>Sun, 24 May 2015 20:06:05 -0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>

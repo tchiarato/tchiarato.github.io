@@ -26,12 +26,6 @@
             href="https://facebook.com/{{ site.theme.social.facebook }}" 
             class="facebook" target="_blank">Facebook</a>
     {% endif %} 
-    /
-    {% if site.theme.social.gplus %}
-        <a title="{{ site.theme.social.gplus }} on Google Plus" 
-            href="https://plus.google.com/{{ site.theme.social.gplus }}" 
-            class="google" target="_blank">Google</a>
-    {% endif %}
   </p>
 </div>
 {% endcapture %}{{ author_info | strip_newlines }}

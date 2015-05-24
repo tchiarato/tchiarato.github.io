@@ -1,4 +1,5 @@
 ---
+comments: true
 layout: post
 title:  "Sample post from Gaya theme"
 date:   2014-12-27 11:15:02
