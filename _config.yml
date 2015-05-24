@@ -1,5 +1,5 @@
 # Site settings
-title: Software Development
+title: Amazing Development
 tagline: by Thiago Chiarato
 email: chiarato@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -26,7 +26,7 @@ theme:
   show_author_info: true
 
   # Disqus comments manager - shortname
-disqus_shortname: blog-chiarato
+  disqus_shortname: blog-chiarato
 
   # Google Analytics/Webmaster key, leave blank to ignore
   google_analytics_key: 
