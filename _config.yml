@@ -30,14 +30,14 @@ theme:
   disqus_shortname: blog-chiarato
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
+  google_analytics_key: AIzaSyD667VtCB99jr_xXg5go6Pq-kU520C1eks
   google_webmaster_key: 
 
 # Build settings
 markdown: kramdown
 
 # Permalinks
-permalink:        pretty
+permalink: retty
 
 # Pagination config
 paginate: 5
