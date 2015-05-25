@@ -6,9 +6,39 @@
 </description>
     <link>http://127.0.0.1:4000/</link>
     <atom:link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 May 2015 20:06:05 -0300</pubDate>
-    <lastBuildDate>Sun, 24 May 2015 20:06:05 -0300</lastBuildDate>
+    <pubDate>Sun, 24 May 2015 21:18:38 -0300</pubDate>
+    <lastBuildDate>Sun, 24 May 2015 21:18:38 -0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>#1 Prove of Concept: Failover com Ruby e MongoDB</title>
+        <description>&lt;p&gt;Quando vi pela primeira vez como funciona o sistema de recuperação de falhas do
+MongoDB - &lt;strong&gt;Replica Set&lt;/strong&gt; - foi como se um mundo novo tivesse se aberto.
+Veja com esse POC, como funciona na prática o processo de substituição e
+recuperação de falhas do MongoDB.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;failover&quot;&gt;Failover&lt;/h2&gt;
+
+&lt;p&gt;Failover é a forma com que um sistema pode se recuperar de uma falha sendo
+substituido por um systema secundário.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 24 May 2015 00:00:00 -0300</pubDate>
+        <link>http://127.0.0.1:4000/failover-com-ruby-e-mongodb</link>
+        <guid isPermaLink="true">http://127.0.0.1:4000/failover-com-ruby-e-mongodb</guid>
+        
+        <category>ruby</category>
+        
+        <category>MongoDB</category>
+        
+        
+        <category>ruby</category>
+        
+        <category>mongodb</category>
+        
+      </item>
     
       <item>
         <title>Sample post from Gaya theme</title>
