@@ -1,14 +1,14 @@
 # Site settings
-title: Amazing::Development
-tagline: by Thiago Chiarato
-email: chiarato@gmail.com
+title: Your awesome title
+tagline: And Tagline
+email: gayanvirajith@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Ahoy, sou desenvolvedor ruby on rails e C#.
-  Agnóstico de linguagem, vamos aprender e ensinar ao mesmo tempo.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.chiarato.com" # the base hostname & protocol for your site
+  Hi, I’m a professional UI/UX designrer and web developer. 
+  I love being minimal and creative.
+baseurl: "/gaya" # the subpath of your site, e.g. /blog/
+url: "http://gayan.me" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
-author: "Thiago Chiarato"
+author: "Tom Warlker"
 author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
 # Theme customization - please change from the defaults!
 theme:
@@ -16,9 +16,12 @@ theme:
   highlight_color: "#205081" #205081" # "#272935"
   # Social media links, leave blank to ignore
   social: 
-    github: tchiarato
-    twitter: tchiarato
-    facebook: thiago.chiarato.3
+    github: gayanvirajith
+    twitter: gayanvirajith
+    facebook: gayanvirajith
+    gplus: +gayanvirajith
+    # dribble: gayanvirajith
+    pinterest: gayanvirajith
 
   # Enable share buttons on post footer
   show_share_buttons: true
@@ -27,17 +30,17 @@ theme:
   show_author_info: true
 
   # Disqus comments manager - shortname
-  disqus_shortname: blog-chiarato
+  # disqus_shortname: gaya-webcreate
 
   # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: AIzaSyD667VtCB99jr_xXg5go6Pq-kU520C1eks
+  google_analytics_key: 
   google_webmaster_key: 
 
 # Build settings
 markdown: kramdown
 
 # Permalinks
-permalink: retty
+permalink:        pretty
 
 # Pagination config
 paginate: 5

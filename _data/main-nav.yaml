@@ -1,4 +1,4 @@
 - title: "About me" # Title/Caption of the menu item
-  href: "https://br.linkedin.com/in/thiagochiarato" # the page where it pointed 
+  href: "/about" # the page where it pointed 
 - title: "Blog Archive"
   href: "/archive"
