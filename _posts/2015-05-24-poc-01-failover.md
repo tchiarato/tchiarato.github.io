@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "#1 PoC: Failover com Ruby e MongoDB"
+title: "%231 PoC: Failover com Ruby e MongoDB"
 description: "Veja na prática como o MongoDB se recupera de falhas (failover)"
 categories:
 - Ruby
