@@ -6,15 +6,17 @@ banner_image: sample-banner-image-2.jpg
 banner_image_alt: About me
 ---
 
-Hi, I am Tom Warlker. I am a professional UI/UX designrer and web developer. I love being minimal and creative.
+Sou Thiago Chiarato, programador, nerd e apaixonado por aprender novas tecnologias.
 
-I prefer to serve with Php and Ruby based stacks and also love to work 
-on [Jekyll][jekyll] and [Processwire CMS/CMF][pw].
+Já trabalhei com diversas linguagens de programação mas atualmente estou me
+dedicando ao Ruby on Rails.
+
+Você pode encontrar mais informações no meu [Linkedin](https://br.linkedin.com/in/thiagochiarato)
+ou no meu [Github](http://www.github.com/tchiarato).
 
 ### Contact me
 
-Say `Hello` at gayanvirajith@gmail.com or find
-me on
+Say `Hello` at chiarato@gmail.com
 
 ---
 

@@ -1,56 +1,50 @@
 ---
 layout: post
-title: "#1 Prove of Concept: Failover com Ruby e MongoDB"
+title: "#1 PoC: Failover com Ruby e MongoDB"
 description: "Veja na prática como o MongoDB se recupera de falhas (failover)"
 categories:
 - Ruby
 - MongoDB
-tags: [ruby, MongoDB]
+tags: [ruby, mongodb]
 permalink: failover-com-ruby-e-mongodb
 comments: true
 ---
 
 Quando vi pela primeira vez como funciona o sistema de recuperação de falhas do
 MongoDB (**Replica Set**) foi como se um mundo novo tivesse se aberto.
-
 Veja com esse POC, como funciona na prática o processo de substituição  de nós e
 recuperação de falhas do MongoDB.
 
 ## O que é Failover e Replica Set?
 
 Failover é a forma com que um sistema pode se recuperar de uma falha sendo
-substituido por um systema secundário.
-
-Um replset ou ReplicaSet pode ser descrito como um processo de sincronização de
-dados em múltiplos servidores. Este processo de replicação aumenta a capacidade
-que o sistema tem de se recuperar de falhas e perda de dados.
+substituído por um sistema secundário.
 
 Você pode saber mais, acessando o post que eu escrevi para o Awesome blog [Ship
 It](http://shipit.resultadosdigitais.com.br/blog/alta-disponibilidade-e-tolerancia-a-falhas-com-mongodb/) da [Resultados Digitais](http://www.resultadosdigitais.com.br).
 
 ___
 
-Para realizar este POC, eu criei um script Ruby que realiza um loop infinito lendo
+Neste PoC, criei um script Ruby que realiza um loop infinito lendo
 os dados de um documento do MongoDB.
 
-Todo o código que eu usei pode ser encontrado no meu
-[Github](http://github.com/tchiarato)
+Todo o código que usei pode ser encontrado no meu
+[Github](https://github.com/tchiarato/Failover)
 
 ___
 
 ## Hands-on:
 
-- Precisamos instanciar nosso replica set. Você vai encontrar dois arquivos no
+- Primeiro precisamos instanciar nosso replica set. Você vai encontrar dois arquivos no
    repositório deste projeto (create_replset.sh e init.js).
-   Com o terminal aberto execute primeiro o **create_replset.sh** e em seguida
-   incie o seu replica set com o arquivo **init.js**:
+   No terminal execute os comandos abaixo:
 
 {% highlight bash %}
 $ sudo bash create_replset.sh
 {% endhighlight %}
 
 {% highlight bash %}
-$ mongo localhost:27017 < init.js
+$ mongo < init.js
 {% endhighlight %}
 
 - Instale a gem do [MongoDB Ruby Driver](https://github.com/mongodb/mongo-ruby-driver):
@@ -93,9 +87,10 @@ end
 #=> [...]
 {% endhighlight %}
 
-- Se você tentar matar o mongo nesse momento, o script vai falhar com uma
-  exceção. Pois o drive deixa a critério do programador decidiro o que fazer.
-  Desta forma eu criei uma forma de *retry* que trata a exceção lançada e tenta
+- Se você tentar matar o mongo nesse momento o script vai falhar com uma
+  exceção. O drive deixa a critério do programador o tratamento das exceções
+  lançadas.
+  Desta forma eu criei um *retry* manual que trata a exceção lançada e tenta
   executar o processo mais uma vez:
 
 {% highlight ruby %}
@@ -112,7 +107,7 @@ def failover
 end
 {% endhighlight %}
 
-- Agora com o *loop* adaptado, ele fica da seguinte forma:
+- Com o *loop* adaptado, ele fica da seguinte forma:
 
 {% highlight ruby %}
 loop do
@@ -126,28 +121,29 @@ loop do
 end
 {% endhighlight %}
 
-- Entre em qualquer instância do *replica set* e execute o comando rs.status()
-  para descobrir qual é o nó primário:
+- Agora você pode matar a instância primária do seu replica set para ver o
+  failover em ação. Use os comandos abaixo para matar o processo:
+
+{% highlight bash %}
+# Esteja logado na instância primária do seu replica set
+> use admin
+> db.shutdownServer()
+{% endhighlight %}
+
+- Para descobrir qual é o nó primário do replica set, execute os comandos abaixo:
+
 {% highlight bash %}
 $ mongo --port 27017
 {% endhighlight %}
 
 {% highlight bash %}
-replica_set:SECONDARY>rs.status()
-{% endhighlight %}
-
-- Sabendo qual é a instância primária do seu *replica set*, logue na mesma e
-  execute os comandos abaixo:
-
-{% highlight bash %}
-use admin
-db.shutdownServer()
+# Instância localhost:27017
+> rs.status()
 {% endhighlight %}
 
 ___
 
-Após seguir todos os passos acima, você deve observar que durante algum tempo
-após matar o processo primário, é logado no console a mensagem de 'Server Down'
-mas logo em seguida, o nome do usuário volta a ser impresso na tela. Win!
+Após seguir todos os passos acima você deve observar que após matar o processo primário,
+durante algum tempo é exibido no console a mensagem 'Server Down', porém, logo em seguida o nome do usuário volta a ser impresso na tela. Win!
 
-![Failover em ação]({{ site.url  }}/assets/images/poc-01-failover.gif)
+![Failover em ação]({{ site.url }}/assets/images/poc-01-failover.gif)
