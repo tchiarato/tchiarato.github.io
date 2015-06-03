@@ -39,7 +39,7 @@ theme:
 markdown: kramdown
 
 # Permalinks
-permalink: retty
+permalink: pretty
 
 # Pagination config
 paginate: 5
