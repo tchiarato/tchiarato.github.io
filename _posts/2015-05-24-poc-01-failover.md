@@ -146,4 +146,4 @@ ___
 Após seguir todos os passos acima você deve observar que após matar o processo primário,
 durante algum tempo é exibido no console a mensagem 'Server Down', porém, logo em seguida o nome do usuário volta a ser impresso na tela. Win!
 
-![Failover em ação]({{ site.url }}/assets/images/poc-01-failover.gif)
+[![Failover em ação](https://asciinema.org/a/0p74torh6dynwwn083ndt3w8g.png)](https://asciinema.org/a/0p74torh6dynwwn083ndt3w8g)
