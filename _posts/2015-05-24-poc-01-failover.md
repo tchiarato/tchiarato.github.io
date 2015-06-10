@@ -56,7 +56,8 @@ gem 'mongo', '~> 2.0'
 - Instancie um novo `client` informando os dados do *replica set*:
 
 {% highlight ruby %}
-client = Mongo::Client.new(['localhost:27017', 'localhost:27018', 'localhost:27019'], database: '[Informe aqui o nome do seu Database]', replica_set: 'replica_set')
+hosts = ['localhost:27017', 'localhost:27018', 'localhost:27019']
+client = Mongo::Client.new(hosts, database: '[database name]', replica_set: 'replica_set')
 {% endhighlight %}
 
 - Para acessar uma collection do MongoDB, basta passá-la como parâmetro:
